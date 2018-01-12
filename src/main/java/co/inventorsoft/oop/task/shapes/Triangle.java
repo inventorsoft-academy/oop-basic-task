@@ -13,7 +13,7 @@ public class Triangle implements Shape{
         this.b = b;
         this.c = c;
 
-        if (checkLengthSides(a,b,c) == false) {
+        if (!checkLengthSides(a, b, c)) {
             System.out.println("Your triangle sides not correct!");
             System.exit(1);
         }
@@ -25,10 +25,7 @@ public class Triangle implements Shape{
     }
 
     private boolean checkLengthSides (int a, int b, int c) {
-        if (a + b < c || a + c < b || b + c < a) {
-            return false;
-        }
-        else return true;
+        return a + b >= c && a + c >= b && b + c >= a;
     }
 
     @Override
