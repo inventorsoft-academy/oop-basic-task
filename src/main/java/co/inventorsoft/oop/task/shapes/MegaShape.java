@@ -1,4 +1,5 @@
 package main.java.co.inventorsoft.oop.task.shapes;
 
-public class MegaShape {
+public interface MegaShape {
+    public double area();
 }
